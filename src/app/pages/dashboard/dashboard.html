@@ -1,0 +1,77 @@
+<div class="container-fluid dashboard-wrapper">
+
+  <div class="row mb-4">
+    <div class="col-12">
+      <h2 class="dashboard-title">Dashboard Executivo</h2>
+      <div class="title-underline"></div>
+    </div>
+  </div>
+
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+  <div class="col">
+    <div class="card dashboard-card shadow-sm">
+      <div class="card-body">
+        <p class="card-label">Total de Tarefas</p>
+        <h2 class="card-value">{{ totalTarefas | number }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card dashboard-card shadow-sm border-warning">
+      <div class="card-body">
+        <p class="card-label">Avanço Geral</p>
+        <h2 class="card-value text-warning">{{ avancoGeral }}%</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card dashboard-card shadow-sm border-danger">
+      <div class="card-body">
+        <p class="card-label">Tarefas Atrasadas</p>
+        <h2 class="card-value text-danger">{{ atrasadas }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card dashboard-card shadow-sm border-success">
+      <div class="card-body">
+        <p class="card-label">Concluídas</p>
+        <h2 class="card-value text-success">{{ concluidas }}</h2>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Gráficos -->
+  <div class="row mt-5 g-4">
+
+    <div class="col-lg-6">
+      <div class="card shadow-sm graph-card h-100">
+        <div class="card-body">
+          <h5 class="graph-title">Avanço por Disciplina</h5>
+          <canvas baseChart
+                  [data]="barChartData"
+                  [type]="barChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card shadow-sm graph-card h-100">
+        <div class="card-body">
+          <h5 class="graph-title">Curva de Avanço do Projeto</h5>
+          <canvas baseChart
+                  [data]="lineChartData"
+                  [type]="lineChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+</div>
