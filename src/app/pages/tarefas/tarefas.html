@@ -1,1 +1,48 @@
-<p>tarefas works!</p>
+<div class="card">
+  <div class="card-body">
+
+    <h5>Nova Tarefa</h5>
+
+    <form (ngSubmit)="salvar()">
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <label>Código</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="tarefa.codigo"
+                 name="codigo"
+                 required>
+        </div>
+
+        <div class="col-md-5">
+          <label>Descrição</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="tarefa.descricao"
+                 name="descricao">
+        </div>
+
+        <div class="col-md-2">
+          <label>Início</label>
+          <input type="date" class="form-control"
+                 [(ngModel)]="tarefa.dataInicio"
+                 name="inicio">
+        </div>
+
+        <div class="col-md-2">
+          <label>Fim</label>
+          <input type="date" class="form-control"
+                 [(ngModel)]="tarefa.dataFim"
+                 name="fim">
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary mt-3">
+        Salvar
+      </button>
+
+    </form>
+
+  </div>
+</div>

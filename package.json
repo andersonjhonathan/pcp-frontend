@@ -19,10 +19,12 @@
     "@angular/router": "^21.2.0",
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
     "frappe-gantt": "^1.2.2",
     "ng2-charts": "^9.0.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@angular/build": "^21.2.0",
