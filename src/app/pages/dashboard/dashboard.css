@@ -1,7 +1,7 @@
 .dashboard-wrapper {
   padding: 30px;
   background-color: #f4f6f9;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .dashboard-title {

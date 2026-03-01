@@ -1,9 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tarefas',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './tarefas.html',
-  styleUrl: './tarefas.css',
+  styleUrls: ['./tarefas.css'],
 })
-export class TarefasComponent {}
+export class TarefasComponent {
+
+  tarefa = {
+    codigo: '',
+    descricao: '',
+    dataInicio: '',
+    dataFim: ''
+  };
+
+  salvar() {
+    console.log(this.tarefa);
+  }
+}

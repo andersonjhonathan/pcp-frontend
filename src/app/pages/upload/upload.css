@@ -1,0 +1,12 @@
+.upload-box {
+  border: 2px dashed #f37021;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: #fff7f2;
+  cursor: pointer;
+}
+
+.upload-box input {
+  width: 100%;
+}
